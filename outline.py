@@ -18,7 +18,7 @@ frequencyOfInfection = 1e-5
 deathRateOfInfectedCells = 4
 
 #p / hour
-productionRate = 2e6
+virusProductionRate = 2e6
 
 #c / hour
 clearanceRate = 4

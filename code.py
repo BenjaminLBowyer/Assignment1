@@ -11,8 +11,8 @@ O = float(input("Input the death rate of infected cells: "))
 P = float(input("Input the virus production rate: "))
 C = float(input("Input the clearing rate: "))
 
-time0 = float(input("Input the time at start of sim: "))
-time  = float(input("Input the time at the end of the sim: "))
+time0 = 0
+time  = float(input("How long is the sim run for: "))
 num   = int(input("Input the number of time plot points: "))
 
 def step(y, t, B, O, P, C):

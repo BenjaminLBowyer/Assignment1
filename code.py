@@ -30,24 +30,20 @@ T = sol[:, 0]
 I = sol[:, 1]
 V = sol[:, 2]
 
-fig, ax1 = plt.subplots(figsize=(10, 6))
+fig, ax1 = plt.subplots()
 
-ax1.plot(t, T, color='blue',   label="Target Cells (T)")
-ax1.plot(t, I, color='orange', label="Infected Cells (I)")
+ax1.plot(t, T, label="Target Cells (T)")
+ax1.plot(t, I, label="Infected Cells (I)")
 ax1.set_xlabel("Time (hours)")
-ax1.set_ylabel("Cells (linear scale)", color='black')
-ax1.tick_params(axis='y')
+ax1.set_ylabel("Cells")
 
 ax2 = ax1.twinx()
 ax2.semilogy(t, V, color='green', label="Virus (V)")
-ax2.set_ylabel("Virus Load (log scale)", color='green')
-ax2.tick_params(axis='y', labelcolor='green')
+ax2.set_ylabel("Virus Load (log scale)")
 
 lines1, labels1 = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
-ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper right')
+ax1.legend(lines1 + lines2, labels1 + labels2)
 
 plt.title("Viral Infection Model")
-plt.grid(True)
-plt.tight_layout()
 plt.show()

@@ -23,4 +23,5 @@ productionRate = 2e6
 #c / hour
 clearanceRate = 4
 
-
+#function dy / dt = func(y, t, ...)
+#this would mean dT / dt ---> func(T / time)
